@@ -2,7 +2,7 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import Layout from '../../components/layout';
 import Date from '../../components/date';
-import utilStyles from '../../styles/utils.module.css';
+import utilStyles from '../../styles/utils.module.scss';
 import { getAllPostIds, getPostData } from '../../lib/posts';
 
 export async function getStaticProps({ params }) {
@@ -32,7 +32,7 @@ export default function Post({postData}) {
   }
  
   return (
-    <Layout>
+    <Layout home={false}>
         <Head>
             <title>{postData.title}</title>
         </Head>
